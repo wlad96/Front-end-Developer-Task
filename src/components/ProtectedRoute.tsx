@@ -10,7 +10,7 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
 
   React.useEffect(() => {
     if (!loading && !user) {
-      router.push('/sign-in');  // Redirect to login if not authenticated
+      router.push('/sign-in');
     }
   }, [user, loading, router]);
 
@@ -29,7 +29,7 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
   }
 
   if (!user) {
-    return null;  // If user is not authenticated, render nothing (or redirect will occur)
+    return null;
   }
 
   return <>{children}</>;

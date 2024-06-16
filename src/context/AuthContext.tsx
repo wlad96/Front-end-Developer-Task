@@ -28,14 +28,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const login = (user: string) => {
     setUser(user);
     localStorage.setItem('user', user);
-    router.push('/dashboard');  // Redirect to a protected route after login
+    router.push('/dashboard');
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('user');
     setLoading(false);
-    router.push('/sign-in');  // Redirect to login after logout
+    router.push('/sign-in');
   };
 
   return (
